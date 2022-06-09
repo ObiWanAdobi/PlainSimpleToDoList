@@ -1,0 +1,11 @@
+This is a small todo list.
+
+With the Init Version this is possible:
+-Add, Delete and Complete (check) todos
+-Saves progress for the next session
+-For now only I can use it because there is no log in or registration
+
+Features that i want to add:
+-Pomodoro style learn clock that helps with time tracking and focus times.
+-Reward System with a Free Time Clock for completed tasks and completed hours learned/worked on tasks
+-User Log in and registration for managing own tasks

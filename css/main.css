@@ -1,0 +1,178 @@
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 120px;
+}
+
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+#header {
+  font-size: 17px;
+  background-color: #f4c095;
+  padding: 0px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contents {
+  margin-top: 180px;
+}
+
+#time-remaining-description,
+#freetime-description{
+  margin-right: 10px;
+
+}
+
+#freetime,
+#time-remaining{
+  margin-right: 10px;
+}
+
+#content-box1,
+#content-box2,
+#content-box3 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#content-box1 {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  background-color: #1d7874;
+}
+
+#content-box2 {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  background-color: #679289;
+}
+
+#content-box3 {
+  position: absolute;
+  margin-top: 10px;
+  top: 160px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  background-color: #ffffff;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+#priority-selector{
+  border-radius: 50px;
+  border-width: 0px;
+  color: white;
+  margin-right: 15px;
+  background-color: #f4c095;
+}
+
+
+#priority-selector:hover {
+  background-color: #1d7874;
+}
+
+#todo-title{
+  width: 150px;
+  margin-left: 15px;
+  border-radius: 50px;
+  border-width: 0px;
+  padding-left: 10px;
+}
+#todo-title:hover{
+  width: 150px;
+  margin-left: 15px;
+  border-radius: 50px;
+  border-width: 0px;
+  padding-left: 10px;
+}
+
+
+#box1 {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 5px;
+}
+
+.button-style1,
+.button-style2,
+.button-style3 {
+  border-radius: 50px;
+  border-width: 0px;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.button-style1 {
+  background-color: #071e22;
+}
+.button-style1:hover {
+  background-color: #1d7874;
+}
+.button-style2 {
+  background-color: #071e22;
+  margin-left: 50px;
+}
+.button-style2:hover {
+  background-color: #679289;
+}
+
+.button-style3 {
+  background-color: #f4c095;
+  width: 100%;
+  height: 50px;
+  padding: 0px;
+    border-radius: 0;
+  margin-right: 0px;
+}
+
+.button-style3:hover {
+  background-color: #1d7874;
+}
+
+#box1 {
+  gap: 30px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 5px;
+}
+
+#enter-task,
+#freetime-description,
+#time-remaining-description {
+  padding-left: 20px;
+}
