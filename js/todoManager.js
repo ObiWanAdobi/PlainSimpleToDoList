@@ -1,27 +1,66 @@
 // Model Section
 let todos;
 
+const pomodoroTime = 2500; //2500
+let pomodoroPause = false;
+const pomodoroPauseTime = 300; //300 sec = 5 min
+let pomodoroTimeRounds = 0; //Reset after 4 Rounds
+
+let pTime = pomodoroTime;
+let pPTime = pomodoroPauseTime;
+
+let freeTime = 0;
+
 const savedTodos = JSON.parse(localStorage.getItem("key"));
 if (Array.isArray(savedTodos)) {
   todos = savedTodos;
 } else {
   todos = [
     {
-      title: "Get groceries",
+      title: "Task 1",
       priority: "low",
       id: "id1",
     },
     {
-      title: "Make Dinner",
+      title: "Task 2",
       priority: "medium",
       id: "id2",
     },
     {
-      title: "Train",
+      title: "Task 3",
       priority: "high",
       id: "id3",
     },
   ];
+}
+
+//My Timer - for pomodoroTime
+function myTimer() {
+  let minutes = 0;
+  let seconds = 0;
+
+  if (pomodoroTimeRounds <= 4) {
+    if (pomodoroPause == false) {
+      minutes = String(Math.trunc(pTime));
+      seconds = String(pTime % 60);
+    } else {
+      minutes = String(Math.trunc(pPTime));
+      seconds = String(pPTime % 60);
+    }
+
+    if (minutes.length === 1) {
+      minutes = "0" + minutes;
+    }
+
+    if (seconds.length === 1) {
+      seconds = "0" + seconds;
+    }
+
+    return minutes.slice(0,2) + ":" + minutes.slice(2,4);
+  } else {
+    //Reset and Grands special Free Time for compelting full pomodoro
+    pomodoroTimeRounds = 4;
+  }
 }
 
 // Creates a todo
@@ -59,7 +98,6 @@ function toggleTodo(idToCheck) {
   todos.forEach(function (todo) {
     if (todo.id === idToCheck) {
       if (todo.isDone == true) {
-        todo.isDone = false;
       } else {
         todo.isDone = true;
       }
@@ -101,6 +139,13 @@ function render() {
   });
 }
 
+function myTimerRender() {
+  const countContainer = document.getElementById("time-remaining");
+  countContainer.innerText = myTimer();
+}
+
+function renderTime() {}
+
 // Controller - Section
 function addTodo() {
   const textbox = document.getElementById("todo-title");
@@ -128,5 +173,20 @@ function checkTodo(event) {
   toggleTodo(id);
   render();
 }
+
+function startTimerFocus(event) {
+  timerID = setInterval(runCountDown, 500);
+}
+
+function runCountDown() {
+  if (pomodoroPause) {
+    pPTime -= 1;
+  } else {
+    pTime -= 1;
+  }
+  myTimerRender();
+}
+
+function startTimerFreeTime(event) {}
 
 render();
