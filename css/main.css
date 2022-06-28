@@ -14,7 +14,11 @@ div {
 #todoTaskStyleLow,
 #todoTaskStyleMedium,
 #todoTaskStyleHigh,
+<<<<<<< HEAD
 #todoTaskStyleToday {
+=======
+#todoTaskStyleToday{
+>>>>>>> b8d7f0160725f3e7682402b6ed5a1f36c0aa0a1a
   font-size: 15px;
   background-color: #1d7874;
   height: 20px;
@@ -22,6 +26,7 @@ div {
   align-items: center;
   justify-content: left;
 }
+<<<<<<< HEAD
 #todoTaskStyleMedium {
   background-color: #ffb108;
   height: 25px;
@@ -35,6 +40,28 @@ div {
   background-color: #ff0000;
 }
 
+=======
+#todoTaskStyleMedium{
+  background-color: #ffb108;
+  height: 25px;
+
+
+}
+#todoTaskStyleHigh{
+  background-color: #ff5100;
+  height: 35px;
+
+
+}
+#todoTaskStyleToday{
+  height: 50px;
+  background-color: #ff0000;
+
+
+}
+
+
+>>>>>>> b8d7f0160725f3e7682402b6ed5a1f36c0aa0a1a
 body {
   background-color: #ffffff;
 }
