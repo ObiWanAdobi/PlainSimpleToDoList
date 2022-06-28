@@ -56,7 +56,7 @@ function myTimer() {
       seconds = "0" + seconds;
     }
 
-    return minutes.slice(0,2) + ":" + minutes.slice(2,4);
+    return minutes.slice(0, 2) + ":" + minutes.slice(2, 4);
   } else {
     //Reset and Grands special Free Time for compelting full pomodoro
     pomodoroTimeRounds = 4;
@@ -114,12 +114,12 @@ function render() {
     const element = document.createElement("div");
     element.innerText = todo.title + " " + "(" + todo.priority + ")";
 
+   
+
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete";
-    deleteButton.style = "margin-left: 12px";
     deleteButton.onclick = deleteTodo;
     deleteButton.id = todo.id;
-    element.appendChild(deleteButton);
 
     const checkboxElement = document.createElement("input");
     checkboxElement.type = "checkbox";
@@ -127,6 +127,26 @@ function render() {
     checkboxElement.onchange = checkTodo;
     checkboxElement.dataset.todoId = todo.id;
 
+    if (todo.priority == "low") {
+      element.id = "todoTaskStyleLow";
+      deleteButton.style =
+        "margin-left: 12px; background-color: white;border: none; border-radius: 50px;border-width: 0px;";
+    } else if (todo.priority == "medium") {
+      element.id = "todoTaskStyleMedium";
+            deleteButton.style =
+              "margin-left: 12px; background-color: white;border: none; border-radius: 50px;border-width: 0px;";
+    } else if (todo.priority == "high") {
+      element.id = "todoTaskStyleHigh";
+            deleteButton.style =
+              "margin-left: 12px; background-color: white;border: none; border-radius: 50px;border-width: 0px;";
+    } else if (todo.priority == "today") {
+      element.id = "todoTaskStyleToday";
+            deleteButton.style =
+              "margin-left: 12px; background-color: white;border: none; border-radius: 50px;border-width: 0px;";
+    }
+    element.appendChild(deleteButton);
+
+    
     if (todo.isDone == true) {
       checkboxElement.checked = true;
     } else {
