@@ -3,12 +3,36 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  margin-top: 120px;
+  margin-top: 70px;
 }
 
 div {
   margin: 0px;
   padding: 0px;
+}
+
+#todoTaskStyleLow,
+#todoTaskStyleMedium,
+#todoTaskStyleHigh,
+#todoTaskStyleToday {
+  font-size: 15px;
+  background-color: #1d7874;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+#todoTaskStyleMedium {
+  background-color: #ffb108;
+  height: 25px;
+}
+#todoTaskStyleHigh {
+  background-color: #ff5100;
+  height: 35px;
+}
+#todoTaskStyleToday {
+  height: 50px;
+  background-color: #ff0000;
 }
 
 body {
@@ -75,7 +99,7 @@ body {
 #content-box3 {
   position: absolute;
   margin-top: 10px;
-  top: 160px;
+  top: 60px;
   left: 0px;
   right: 0px;
   height: 50px;
